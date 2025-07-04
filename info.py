@@ -13,7 +13,7 @@ def is_enabled(value, default):
 # PyroClient Setup 
 API_ID = int(environ['20919625'])
 API_HASH = environ['40168846bf06f4ff443f0f7a4182bf8d']
-BOT_TOKEN = environ['']
+BOT_TOKEN = environ['5924742128:AAHBP6SyR9WHMYoLD5gE7JVC2BMkRvH4DNk']
 
 # Bot settings
 WEB_SUPPORT = bool(environ.get("WEBHOOK", 'True')) # for web support on/off
@@ -26,8 +26,8 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP')
+auth_channel = environ.get('-1002389404459')
+auth_grp = environ.get('-1002044203250')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
@@ -46,7 +46,7 @@ FORCE_SUB_TEXT = environ.get('FORCE_SUB_TEXT', script.FORCE_SUB_TEXT)
 
 WELCOM_PIC = environ.get("WELCOM_PIC", "")
 WELCOM_TEXT = environ.get("WELCOM_TEXT", script.WELCOM_TEXT)
-PMFILTER = is_enabled(environ.get('PMFILTER', "True"), True)
+PMFILTER = is_enabled(environ.get('PMFILTER', "False"), True)
 G_FILTER = is_enabled(environ.get("G_FILTER", "True"), True)
 BUTTON_LOCK = is_enabled(environ.get("BUTTON_LOCK", "True"), True)
 RemoveBG_API = environ.get("RemoveBG_API", "")
@@ -58,7 +58,7 @@ SHORT_API = environ.get("SHORT_API")
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1001954153980"))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MKN_BOTZ_DISCUSSION_GROUP')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'spportgroup89')
 P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
 PM_IMDB = is_enabled(environ.get('PM_IMDB', "True"), True)
 IMDB = is_enabled(environ.get('IMDB', "True"), True)
